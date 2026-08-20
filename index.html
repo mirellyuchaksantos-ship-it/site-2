@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Seguro | Portal de Apoio ao Estudante</title>
+    <style>
+        /* Cores e Configurações Gerais */
+        :root {
+            --primary: #6c5ce7;
+            --primary-light: #a29bfe;
+            --background: #f8f9fa;
+            --text-color: #2d3436;
+            --white: #ffffff;
+            --accent: #fd79a8;
+            --success: #00b894;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Seções Embelezadas */
+        .section-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        /* Teste: Como saber se estou sofrendo Cyberbullying */
+        .checklist-item {
+            background-color: #f1f2f6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .checklist-item:hover {
+            background-color: #e4e7eb;
+        }
+
+        .checklist-item input {
+            margin-top: 5px;
+            transform: scale(1.2);
+            accent-color: var(--primary);
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffeaa7;
+            display: none;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Caixinha de Suporte e Denúncia */
+        .support-box {
+            background: linear-gradient(135deg, #ffffff, #fff0f5);
+            border-left: 5px solid var(--accent);
+        }
+
+        .support-box h2 {
+            color: var(--accent);
+        }
+
+        .step-list {
+            list-style: none;
+            counter-reset: steps;
+        }
+
+        .step-list li {
+            position: relative;
+            margin-bottom: 15px;
+            padding-left: 45px;
+        }
+
+        .step-list li::before {
+            counter-increment: steps;
+            content: counter(steps);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: var(--accent);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Canais de Ajuda */
+        .help-channels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .channel-card {
+            background-color: var(--white);
+            border: 2px dashed var(--primary-light);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .channel-card strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Acolhedor -->
+    <header>
+        <h1>Portal Conecta Seguro</h1>
+        <p>Você não está só. Este é um espaço seguro de acolhimento, empatia e orientação sobre a sua vida digital.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Seção Informativa -->
+        <section class="section-card">
+            <h2>💻 O que é Cyberbullying?</h2>
+            <p>O cyberbullying é a prática de agredir, humilhar, perseguir ou intimidar alguém utilizando a internet, redes sociais, aplicativos de mensagens ou jogos online. Ao contrário do bullying físico, ele pode acontecer a qualquer hora do dia ou da noite, invadindo o espaço que deveria ser de descanso do estudante.</p>
+            <p>Nossa escola defende um ambiente digital saudável. A internet deve ser usada para conectar pessoas de forma positiva, respeitando as diferenças e espalhando empatia.</p>
+        </section>
+
+        <!-- Seção: Como Saber Se Você Se Enquadra -->
+        <section class="section-card">
+            <h2>🔍 Identifique os Sinais</h2>
+            <p>Às vezes, é difícil perceber se uma brincadeira passou dos limites. Marque as opções abaixo caso você tenha passado por isso nos últimos tempos:</p>
+            
+            <label class="checklist-item">
+                <input type="checkbox" class="quiz-check" onclick="checkQuiz()">
+                <span>Pessoas criaram perfis falsos ou páginas usando seu nome ou foto para fazer piadas ofensivas.</span>
+            </label>
+            <label class="checklist-item">
+                <input type="checkbox" class="quiz-check" onclick="checkQuiz()">
+                <span>Você recebeu mensagens repetidas com insultos, ameaças ou apelidos humilhantes em suas redes sociais ou jogos.</span>
+            </label>
+            <label class="checklist-item">
+                <input type="checkbox" class="quiz-check" onclick="checkQuiz()">
+                <span>Fotos ou vídeos seus foram espalhados ou compartilhados em grupos sem a sua autorização para expor você ao ridículo.</span>
+            </label>
+            <label class="checklist-item">
+                <input type="checkbox" class="quiz-check" onclick="checkQuiz()">
+                <span>Você foi excluído propositalmente de grupos de amigos de forma sistemática combinada com comentários maldosos.</span>
+            </label>
+
+            <div id="quiz-result" class="result-box">
+                Atenção: Se você marcou um ou mais itens, você pode estar passando por uma situação de Cyberbullying. Lembre-se que a culpa nunca é sua. Veja abaixo como agir e se proteger.
+            </div>
+        </section>
+
+        <!-- Caixinha de Suporte e Denúncia -->
+        <section class="section-card support-box">
+            <h2>🛡️ Caixa de Suporte: Como Denunciar</h2>
+            <p>Se você se identificou com os sinais acima ou conhece um colega que está sofrendo, siga estas instruções seguras para fazer uma denúncia:</p>
+            
+            <ul class="step-list">
+                <li>
+                    <strong>Não apague nada (Guarde as Provas):</strong> Tire capturas de tela (prints) de todas as mensagens, comentários, links de perfis e fotos ofensivas. Elas servem como prova legal do ocorrido.
+                </li>
+                <li>
+                    <strong>Bloqueie o agressor:</strong> Após registrar os prints, bloqueie o perfil nas redes sociais ou canais de comunicação para evitar novos ataques imediatos.
+                </li>
+                <li>
+                    <strong>Denuncie na própria plataforma:</strong> Redes sociais como Instagram, TikTok, WhatsApp e Discord possuem ferramentas nativas para denunciar publicações e contas abusivas.
+                </li>
+                <li>
+                    <strong>Fale com um adulto de confiança:</strong> Conte para seus pais, responsáveis, ou procure a coordenação/orientação pedagógica da nossa escola. Nós estamos prontos para acolher você sem julgamentos.
+                </li>
+            </ul>
+
+            <div class="help-channels">
+                <div class="channel-card">
+                    <strong>SaferNet Brasil</strong>
+                    <p>Ajuda e orientação anônima sobre crimes na internet.</p>
+                    <a href="https://safernet.org.br" target="_blank">Canal de Ajuda SaferNet</a>
+                </div>
+                <div class="channel-card">
+                    <strong>Disque 100</strong>
+                    <p>Disque Direitos Humanos. Ligação gratuita e anônima para denunciar violações.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Portal de Apoio ao Estudante — Criado com foco no respeito, empatia e segurança de todos.</p>
+    </footer>
+
+    <!-- Interatividade com JavaScript -->
+    <script>
+        function checkQuiz() {
+            const checkboxes = document.querySelectorAll('.quiz-check');
+            const resultBox = document.getElementById('quiz-result');
+            let anyChecked = false;
+
+            checkboxes.forEach(item => {
+                if(item.checked) {
+                    anyChecked = true;
 
